@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/category_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,21 +11,28 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
+      TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white);
+  static final List<Widget> _widgetOptions = <Widget>[
+    SizedBox(
+      child: Column(
+        children: const [
+          Text(
+            'Home',
+            style: optionStyle,
+          ),
+          CategoryCard(),
+        ],
+      ),
     ),
-    Text(
+    const Text(
       'Paintings',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Musics',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Texts',
       style: optionStyle,
     ),
@@ -40,14 +48,58 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        title: const Text('Galeria'),
+        title: const Text('Calotas Voadoras'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                  image: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzTuLO5z8ZmnvqNSMdaaYkTKvphKORCS7YA&usqp=CAU',
+                  ),
+                ),
+                color: Theme.of(context).backgroundColor,
+              ),
+              child: const Text(
+                'User Name',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.message,
+                color: Colors.white,
+              ),
+              title: Text('Messages'),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.account_circle,
+                color: Colors.white,
+              ),
+              title: Text('Profile'),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
+              title: Text('Settings'),
+            ),
+          ],
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
-              child: _widgetOptions.elementAt(_selectedIndex),
+            child: _widgetOptions.elementAt(_selectedIndex),
           ),
         ],
       ),

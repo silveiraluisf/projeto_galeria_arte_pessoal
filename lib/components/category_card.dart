@@ -33,15 +33,11 @@ class CategoryCard extends StatelessWidget {
                       height: 150,
                       color: Colors.black54,
                       padding: const EdgeInsets.all(6),
-                      child: const Positioned(
-                        bottom: 20,
-                        right: 0,
-                        child: Center(
-                          child: Text(
-                            'Musicas',
-                            style: TextStyle(
-                                color: Colors.white70, fontSize: 24),
-                          ),
+                      child: Center(
+                        child: Text(
+                          'Musicas',
+                          style: TextStyle(
+                              color: Colors.white70, fontSize: 24),
                         ),
                       ),
                     ),
@@ -75,15 +71,11 @@ class CategoryCard extends StatelessWidget {
                       height: 150,
                       color: Colors.black54,
                       padding: const EdgeInsets.all(6),
-                      child: const Positioned(
-                        bottom: 20,
-                        right: 0,
-                        child: Center(
-                          child: Text(
-                            'Pinturas',
-                            style: TextStyle(
-                                color: Colors.white70, fontSize: 24),
-                          ),
+                      child: Center(
+                        child: Text(
+                          'Pinturas',
+                          style: TextStyle(
+                              color: Colors.white70, fontSize: 24),
                         ),
                       ),
                     ),
@@ -117,15 +109,11 @@ class CategoryCard extends StatelessWidget {
                       height: 150,
                       color: Colors.black54,
                       padding: const EdgeInsets.all(6),
-                      child: const Positioned(
-                        bottom: 20,
-                        right: 0,
-                        child: Center(
-                          child: Text(
-                            'Textos',
-                            style: TextStyle(
-                                color: Colors.white70, fontSize: 24),
-                          ),
+                      child: Center(
+                        child: Text(
+                          'Textos',
+                          style: TextStyle(
+                              color: Colors.white70, fontSize: 24),
                         ),
                       ),
                     ),
