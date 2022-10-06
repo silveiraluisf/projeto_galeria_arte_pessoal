@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_galeria_arte_pessoal/components/painting_section.dart';
 import '../components/category_card.dart';
+import '../components/music_section.dart';
+import '../components/text_section.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,32 +13,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white);
+
   static final List<Widget> _widgetOptions = <Widget>[
-    SizedBox(
-      child: Column(
-        children: const [
-          Text(
-            'Home',
-            style: optionStyle,
-          ),
-          CategoryCard(),
-        ],
-      ),
-    ),
-    const Text(
-      'Paintings',
-      style: optionStyle,
-    ),
-    const Text(
-      'Musics',
-      style: optionStyle,
-    ),
-    const Text(
-      'Texts',
-      style: optionStyle,
-    ),
+    CategoryCard(),
+    PaintingSection(),
+    MusicSection(),
+    TextSection(),
   ];
 
   void _onItemTapped(int index) {
