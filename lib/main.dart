@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_galeria_arte_pessoal/screens/home_screen.dart';
+import '../screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,12 @@ class MyApp extends StatelessWidget {
         canvasColor: const Color.fromRGBO(20, 20, 20, 1),
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.amber
+        ),
+        textTheme: ThemeData.light().textTheme.copyWith(
+          bodyText1: const TextStyle(
+            color: Colors.white,
+            fontSize: 16
+          )
         )
       ),
       home: const HomeScreen(),
