@@ -5,6 +5,6 @@ class TextSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Text', style: TextStyle(color: Colors.white),));
+    return Center(child: Text('Text', style: TextStyle(color: Colors.white, fontSize: 36),));
   }
 }

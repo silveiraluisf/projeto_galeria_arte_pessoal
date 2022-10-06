@@ -5,6 +5,6 @@ class MusicSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Music', style: TextStyle(color: Colors.white),),);
+    return Center(child: Text('Music', style: TextStyle(fontSize: 36, color: Colors.white),));
   }
 }

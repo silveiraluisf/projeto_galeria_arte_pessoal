@@ -5,6 +5,6 @@ class PaintingSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(onPressed: (){});
+    return Center(child: Text('Painting', style: TextStyle(fontSize: 36, color: Colors.white),));
   }
 }

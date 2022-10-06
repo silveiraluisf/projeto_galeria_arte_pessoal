@@ -79,13 +79,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Container(
             child: _widgetOptions.elementAt(_selectedIndex),
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(child: const Icon(Icons.add),onPressed: (){}),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
