@@ -7,6 +7,7 @@ class MusicSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
+        color: Colors.black12,
         height: 100,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,7 +30,6 @@ class MusicSection extends StatelessWidget {
                   width: 300,
                   child: LinearProgressIndicator(
                     color: Colors.amber,
-                    backgroundColor: Colors.black54,
                     value: 0.6,
                   ),
                 ),
