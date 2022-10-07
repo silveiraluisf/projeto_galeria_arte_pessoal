@@ -5,6 +5,39 @@ class MusicSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Music', style: TextStyle(fontSize: 36, color: Colors.white),));
+    return Card(
+      child: Container(
+        height: 100,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 60,
+                  child: Icon(Icons.play_circle, size: 40,),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Nome da musica.mp3', style: TextStyle(fontSize: 16),),
+                SizedBox(height: 30,),
+                Container(
+                  width: 300,
+                  child: LinearProgressIndicator(
+                    color: Colors.amber,
+                    backgroundColor: Colors.black54,
+                    value: 0.6,
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -15,10 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    CategoryCard(),
-    PaintingSection(),
-    MusicSection(),
-    TextSection(),
+    const CategoryCard(),
+    const PaintingSection(),
+    const MusicSection(),
+    const TextSection(),
   ];
 
   void _onItemTapped(int index) {
